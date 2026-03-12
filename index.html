@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-   <!-- I see You :) Check line 565 :) -->
+   <!-- I see You :) Check line 965 :) -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +10,7 @@
     <link rel="icon" type="image/png" href="images/kk-avtar-round.png">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -63,7 +64,8 @@
     <section class="section fade-in" id="about">
         <h2 class="gradient-scroll">About</h2>
         <p>
-          Security researcher with responsible vulnerability disclosures across Microsoft, NASA, OpenAI, and Infosys (CERT-In acknowledged). Discovered CVE-2025-55182 affecting production sites including The Economic Times. Contributed security findings to open-source projects Metabase and Uptime Kuma (80K+ GitHub stars). Conducted red team adversarial simulations on ICS/SCADA infrastructure for critical energy systems at Con Edison. MS in Cybersecurity from Pace University (3.9 GPA, Summa Cum Laude). I find real vulnerabilities in real systems - and I document how to fix them.</p>
+            Security researcher with responsible vulnerability disclosures across Microsoft, Apple, NASA, OpenAI, JPMorgan Chase, and Infosys (CERT-In acknowledged). Discovered CVE-2025-55182 affecting production sites including The Economic Times. Contributed security findings to open-source projects Metabase and Uptime Kuma (80K+ GitHub stars). Conducted red team adversarial simulations on ICS/SCADA infrastructure for critical energy systems at Con Edison. MS in Cybersecurity from Pace University (3.9 GPA, Summa Cum Laude). I find real vulnerabilities in real systems — and I document how to fix them.
+        </p>
         <div class="section-image">
             <img src="images/kk.jpg" alt="Me" style="width:350px; border-radius:20px;">
         </div>
@@ -72,44 +74,444 @@
 
     <section class="section fade-in" id="research-security">
         <h2 class="gradient-scroll">Security Research & Disclosure</h2>
-        <p>
-            Active Researcher conducting structured security assessments across enterprise and public-sector environments.
-        </p>
-<div class="experience-block">
-    <h3>Selected Disclosures</h3>
+        <p>Active researcher conducting structured security assessments across enterprise, open-source, and public-sector environments.</p>
 
-    <p>
-        Remote Code Execution (RCE)<br>
-        • CVE-2025-55182 — React Server Component RCE — Discovered via passive reconnaissance using FOFA and Shodan API. Responsibly reported affected domains including The Economic Times (Times Internet) and multiple AWS-hosted applications. CERT-In acknowledged.
-    </p>
-       <br> 
-    <p>
-        Access Control & Authorization Flaws<br>
- • Uptime Kuma (Open Source, 83K+ GitHub Stars) — Discovered missing authorization check on the ping badge endpoint (CWE-862) that leaked private monitor response times to unauthenticated users. Moderate severity. Accepted by maintainers, patch developed, CVE pending. GHSA-c7hf-c5p5-5g6h <br>
- • Metabase (Open Source, 46K+ GitHub Stars) — Identified public sharing disabled bypass via the parameter values endpoint, allowing unauthenticated access to dataset values even after public sharing was explicitly disabled. Confirmed and reproduced by Metabase security team; patches being rolled out for impacted versions.<br>
- • Infosys (career.infosys.com) — Disclosed insecure OAuth 2.0 Password Grant (ROPC) enabled on production Keycloak IAM, allowing token issuance via direct credential submission. Acknowledged by CERT-In.
-    </p>
-  <br> 
-    <p>
-        Information Disclosure<br>
-        • ChatGPT Atlas (OpenAI) — Identified insecure local logging behavior in the Atlas macOS browser where world-readable debug logs (644 permissions) persisted third-party renderer console output including OAuth tokens. Submitted via Bugcrowd; classified as informational hardening recommendation. (2026)<br>
- •Pretix (Open Source) — Identified configuration parsing flaw in request_id_header handling leading to potential log injection. Responsibly disclosed and acknowledged by maintainers. PR #5920<br>
- •NASA — Discovered sensitive system data exposure via passive reconnaissance and endpoint analysis.<br>
- •Mercedes-Benz Xentry Update Service — Identified publicly accessible OTA update directories exposing internal metadata and release-cycle artifacts.
-    </p>
-  <br> 
-    <p>
-        Configuration & Logging Weaknesses<br>
-        • REQUEST_ID_HEADER parsing flaw -  <a href="https://pretix.eu/about/en/blog/20260224-release-2026-2/#:~:text=The%20config%20property-,request_id_header,-is%20now%20validated" target="_blank">
-        Pretix | <a href="https://github.com/pretix/pretix/pull/5920" target="_blank">Github</a> 
-    </a><br>
-        • Log injection vector via configuration handling - Pretix
-    </p>
+        <!-- Stats Bar -->
+        <div class="disc-stats">
+            <div class="disc-stat">
+                <span class="disc-stat-val">1</span>
+                <span class="disc-stat-label">CVEs Assigned</span>
+            </div>
+            <div class="disc-stat">
+                <span class="disc-stat-val">16</span>
+                <span class="disc-stat-label">Advisories Filed</span>
+            </div>
+            <div class="disc-stat">
+                <span class="disc-stat-val">14</span>
+                <span class="disc-stat-label">Organizations</span>
+            </div>
+            <div class="disc-stat">
+                <span class="disc-stat-val">5</span>
+                <span class="disc-stat-label">Critical + High</span>
+            </div>
+        </div>
 
-    <div class="section-image">
-        <img src="images/x.jpg" alt="CVE in progress" style="width:400px; border-radius:20px;">
-    </div>
-</div>
+        <!-- Disclosed-to strip -->
+        <div class="disc-org-strip">
+            <span class="disc-org-strip-label">Disclosed to</span>
+            <div class="disc-org-logos">
+                <div class="disc-org-logo" title="Apple">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg" alt="Apple">
+                </div>
+                <div class="disc-org-logo" title="Microsoft">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoft.svg" alt="Microsoft">
+                </div>
+                <div class="disc-org-logo" title="NASA">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/nasa.svg" alt="NASA">
+                </div>
+                <div class="disc-org-logo" title="OpenAI">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/openai.svg" alt="OpenAI">
+                </div>
+                <div class="disc-org-logo" title="Mercedes-Benz">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/mercedes.svg" alt="Mercedes-Benz">
+                </div>
+                <div class="disc-org-logo" title="React / Next.js">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                </div>
+                <span class="disc-org-more">+8 more</span>
+            </div>
+        </div>
+
+        <!-- CRITICAL -->
+        <div class="disc-group" data-severity="critical">
+            <div class="disc-group-header">
+                <span class="disc-sev-bar" style="background:#ff3b30;"></span>
+                <span class="disc-sev-label" style="color:#ff3b30;">Critical</span>
+                <span class="disc-sev-count">1</span>
+            </div>
+            <div class="disc-list">
+                <div class="disc-card" onclick="this.classList.toggle('open')" style="--sev-color:#ff3b30;">
+                    <div class="disc-card-row">
+                        <div class="disc-card-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                        </div>
+                        <div class="disc-card-body">
+                            <div class="disc-card-org">React / Next.js</div>
+                            <div class="disc-card-title">Remote Code Execution via exposed RSC endpoints</div>
+                        </div>
+                        <div class="disc-card-meta">
+                            <span class="disc-badge disc-badge-green">CVE Assigned</span>
+                            <span class="disc-chevron">›</span>
+                        </div>
+                    </div>
+                    <div class="disc-card-detail">
+                        <div class="disc-detail-grid">
+                            <div><span class="disc-detail-label">ID</span><span class="disc-detail-val">CVE-2025-55182</span></div>
+                            <div><span class="disc-detail-label">CWE</span><span class="disc-detail-val">CWE-94</span></div>
+                        </div>
+                        <p class="disc-detail-text">Discovered via FOFA & Shodan recon. Affected production sites including The Economic Times (Times Internet) and multiple AWS-hosted apps. CERT-In acknowledged.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HIGH -->
+        <div class="disc-group" data-severity="high">
+            <div class="disc-group-header">
+                <span class="disc-sev-bar" style="background:#ff9500;"></span>
+                <span class="disc-sev-label" style="color:#ff9500;">High</span>
+                <span class="disc-sev-count">4</span>
+            </div>
+            <div class="disc-list">
+
+                <div class="disc-card" onclick="this.classList.toggle('open')" style="--sev-color:#ff9500;">
+                    <div class="disc-card-row">
+                        <div class="disc-card-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg" alt="Apple"></div>
+                        <div class="disc-card-body">
+                            <div class="disc-card-org">Apple <span class="disc-card-sub">swift-nio-http2</span></div>
+                            <div class="disc-card-title">HTTP/2 → HTTP/1 request smuggling via unvalidated :path pseudo-header</div>
+                        </div>
+                        <div class="disc-card-meta">
+                            <span class="disc-badge disc-badge-orange">Triaged</span>
+                            <span class="disc-chevron">›</span>
+                        </div>
+                    </div>
+                    <div class="disc-card-detail">
+                        <div class="disc-detail-grid">
+                            <div><span class="disc-detail-label">ID</span><span class="disc-detail-val">GHSA-4px2-pw77-vc85</span></div>
+                            <div><span class="disc-detail-label">CWE</span><span class="disc-detail-val">CWE-113</span></div>
+                        </div>
+                        <p class="disc-detail-text">Remote protocol-level request smuggling affecting reverse proxy patterns.</p>
+                    </div>
+                </div>
+
+                <div class="disc-card" onclick="this.classList.toggle('open')" style="--sev-color:#ff9500;">
+                    <div class="disc-card-row">
+                        <div class="disc-card-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg" alt="Apple"></div>
+                        <div class="disc-card-body">
+                            <div class="disc-card-org">Apple <span class="disc-card-sub">swift-nio</span></div>
+                            <div class="disc-card-title">CRLF injection in outbound HTTP request URI enabling request splitting</div>
+                        </div>
+                        <div class="disc-card-meta">
+                            <span class="disc-badge disc-badge-orange">CVE Discussion</span>
+                            <span class="disc-chevron">›</span>
+                        </div>
+                    </div>
+                    <div class="disc-card-detail">
+                        <div class="disc-detail-grid">
+                            <div><span class="disc-detail-label">ID</span><span class="disc-detail-val">GHSA-cq87-8r7h-962v</span></div>
+                            <div><span class="disc-detail-label">CWE</span><span class="disc-detail-val">CWE-113</span></div>
+                        </div>
+                        <p class="disc-detail-text">Maintainer acknowledged. Patch discussion ongoing.</p>
+                    </div>
+                </div>
+
+                <div class="disc-card" onclick="this.classList.toggle('open')" style="--sev-color:#ff9500;">
+                    <div class="disc-card-row">
+                        <div class="disc-card-icon"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/directus.svg" alt="Directus"></div>
+                        <div class="disc-card-body">
+                            <div class="disc-card-org">Directus</div>
+                            <div class="disc-card-title">Blind data exfiltration via RBAC bypass in filter queries</div>
+                        </div>
+                        <div class="disc-card-meta">
+                            <span class="disc-badge disc-badge-orange">Advisory Draft</span>
+                            <span class="disc-chevron">›</span>
+                        </div>
+                    </div>
+                    <div class="disc-card-detail">
+                        <div class="disc-detail-grid">
+                            <div><span class="disc-detail-label">ID</span><span class="disc-detail-val">GHSA-2xcm-7h22-3m66</span></div>
+                            <div><span class="disc-detail-label">CWE</span><span class="disc-detail-val">CWE-200 / 284 / 863</span></div>
+                        </div>
+                        <p class="disc-detail-text">Discovered during source-code review of query execution flow.</p>
+                    </div>
+                </div>
+
+                <div class="disc-card" onclick="this.classList.toggle('open')" style="--sev-color:#ff9500;">
+                    <div class="disc-card-row">
+                        <div class="disc-card-icon"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/n8n.svg" alt="n8n"></div>
+                        <div class="disc-card-body">
+                            <div class="disc-card-org">n8n</div>
+                            <div class="disc-card-title">Authorization bypass enabling credential operations via IDOR</div>
+                        </div>
+                        <div class="disc-card-meta">
+                            <span class="disc-badge disc-badge-gray">Closed (Duplicate)</span>
+                            <span class="disc-chevron">›</span>
+                        </div>
+                    </div>
+                    <div class="disc-card-detail">
+                        <div class="disc-detail-grid">
+                            <div><span class="disc-detail-label">ID</span><span class="disc-detail-val">GHSA-9wq9-2r74-4vc8</span></div>
+                            <div><span class="disc-detail-label">CWE</span><span class="disc-detail-val">CWE-639 / 862</span></div>
+                        </div>
+                        <p class="disc-detail-text">Merged into primary advisory. Also identified credential metadata disclosure (GHSA-vh2p-7mqh-wwhw).</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- MEDIUM -->
+        <div class="disc-group" data-severity="medium">
+            <div class="disc-group-header">
+                <span class="disc-sev-bar" style="background:#ffcc00;"></span>
+                <span class="disc-sev-label" style="color:#ffcc00;">Medium</span>
+                <span class="disc-sev-count">5</span>
+            </div>
+            <div class="disc-list">
+
+                <div class="disc-card" onclick="this.classList.toggle('open')" style="--sev-color:#ffcc00;">
+                    <div class="disc-card-row">
+                        <div class="disc-card-icon"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoft.svg" alt="Microsoft"></div>
+                        <div class="disc-card-body">
+                            <div class="disc-card-org">Microsoft <span class="disc-card-sub">OneDrive</span></div>
+                            <div class="disc-card-title">Cross-origin XS-Search timing side-channel for document keyword inference</div>
+                        </div>
+                        <div class="disc-card-meta">
+                            <span class="disc-badge disc-badge-gray">Closed</span>
+                            <span class="disc-chevron">›</span>
+                        </div>
+                    </div>
+                    <div class="disc-card-detail">
+                        <div class="disc-detail-grid">
+                            <div><span class="disc-detail-label">ID</span><span class="disc-detail-val">MSRC Case 104177</span></div>
+                            <div><span class="disc-detail-label">CWE</span><span class="disc-detail-val">CWE-208</span></div>
+                        </div>
+                        <p class="disc-detail-text">Timing attack via response-time analysis. Microsoft was unable to reproduce.</p>
+                    </div>
+                </div>
+
+                <div class="disc-card" onclick="this.classList.toggle('open')" style="--sev-color:#ffcc00;">
+                    <div class="disc-card-row">
+                        <div class="disc-card-icon"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/metabase.svg" alt="Metabase"></div>
+                        <div class="disc-card-body">
+                            <div class="disc-card-org">Metabase <span class="disc-card-stars">★ 46K+</span></div>
+                            <div class="disc-card-title">Public sharing disabled bypass exposing dataset values</div>
+                        </div>
+                        <div class="disc-card-meta">
+                            <span class="disc-badge disc-badge-orange">Fix In Progress</span>
+                            <span class="disc-chevron">›</span>
+                        </div>
+                    </div>
+                    <div class="disc-card-detail">
+                        <div class="disc-detail-grid">
+                            <div><span class="disc-detail-label">ID</span><span class="disc-detail-val">Responsible Disclosure</span></div>
+                            <div><span class="disc-detail-label">CWE</span><span class="disc-detail-val">CWE-284</span></div>
+                        </div>
+                        <p class="disc-detail-text">Vendor reproduced. Patches rolling out for impacted versions.</p>
+                    </div>
+                </div>
+
+                <div class="disc-card" onclick="this.classList.toggle('open')" style="--sev-color:#ffcc00;">
+                    <div class="disc-card-row">
+                        <div class="disc-card-icon"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/uptimekuma.svg" alt="Uptime Kuma"></div>
+                        <div class="disc-card-body">
+                            <div class="disc-card-org">Uptime Kuma <span class="disc-card-stars">★ 83K+</span></div>
+                            <div class="disc-card-title">Missing authorization check leaking private monitor ping response times</div>
+                        </div>
+                        <div class="disc-card-meta">
+                            <span class="disc-badge disc-badge-green">Published</span>
+                            <span class="disc-chevron">›</span>
+                        </div>
+                    </div>
+                    <div class="disc-card-detail">
+                        <div class="disc-detail-grid">
+                            <div><span class="disc-detail-label">ID</span><span class="disc-detail-val">GHSA-c7hf-c5p5-5g6h</span></div>
+                            <div><span class="disc-detail-label">CWE</span><span class="disc-detail-val">CWE-862</span></div>
+                        </div>
+                        <p class="disc-detail-text">Patch created. CVE pending.</p>
+                    </div>
+                </div>
+
+                <div class="disc-card" onclick="this.classList.toggle('open')" style="--sev-color:#ffcc00;">
+                    <div class="disc-card-row">
+                        <div class="disc-card-icon disc-card-initials">PX</div>
+                        <div class="disc-card-body">
+                            <div class="disc-card-org">Pretix <span class="disc-card-sub">OIDC</span></div>
+                            <div class="disc-card-title">PKCE values printed to stdout during token exchange</div>
+                        </div>
+                        <div class="disc-card-meta">
+                            <span class="disc-badge disc-badge-gray">Fixed</span>
+                            <span class="disc-chevron">›</span>
+                        </div>
+                    </div>
+                    <div class="disc-card-detail">
+                        <div class="disc-detail-grid">
+                            <div><span class="disc-detail-label">ID</span><span class="disc-detail-val">Responsible Disclosure</span></div>
+                            <div><span class="disc-detail-label">CWE</span><span class="disc-detail-val">CWE-532</span></div>
+                        </div>
+                        <p class="disc-detail-text">Vendor removed logging. Declined CVE.</p>
+                    </div>
+                </div>
+
+                <div class="disc-card" onclick="this.classList.toggle('open')" style="--sev-color:#ffcc00;">
+                    <div class="disc-card-row">
+                        <div class="disc-card-icon disc-card-initials">IN</div>
+                        <div class="disc-card-body">
+                            <div class="disc-card-org">Infosys <span class="disc-card-sub">Career Portal</span></div>
+                            <div class="disc-card-title">OAuth 2.0 ROPC grant enabled on production Keycloak IAM</div>
+                        </div>
+                        <div class="disc-card-meta">
+                            <span class="disc-badge disc-badge-orange">Investigating</span>
+                            <span class="disc-chevron">›</span>
+                        </div>
+                    </div>
+                    <div class="disc-card-detail">
+                        <div class="disc-detail-grid">
+                            <div><span class="disc-detail-label">ID</span><span class="disc-detail-val">Responsible Disclosure</span></div>
+                            <div><span class="disc-detail-label">CWE</span><span class="disc-detail-val">CWE-522 / 287</span></div>
+                        </div>
+                        <p class="disc-detail-text">Acknowledged by Infosys CERT / CERT-In.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- LOW / INFORMATIONAL -->
+        <div class="disc-group" data-severity="low">
+            <div class="disc-group-header">
+                <span class="disc-sev-bar" style="background:#636366;"></span>
+                <span class="disc-sev-label" style="color:#86868b;">Low / Informational</span>
+                <span class="disc-sev-count">6</span>
+            </div>
+            <div class="disc-list">
+
+                <div class="disc-card" onclick="this.classList.toggle('open')" style="--sev-color:#636366;">
+                    <div class="disc-card-row">
+                        <div class="disc-card-icon disc-card-initials">JP</div>
+                        <div class="disc-card-body">
+                            <div class="disc-card-org">JPMorgan Chase</div>
+                            <div class="disc-card-title">Internal QA/UAT hostnames exposed in production JS bundle</div>
+                        </div>
+                        <div class="disc-card-meta">
+                            <span class="disc-badge disc-badge-green">Fix Pending · Hall of Fame</span>
+                            <span class="disc-chevron">›</span>
+                        </div>
+                    </div>
+                    <div class="disc-card-detail">
+                        <div class="disc-detail-grid">
+                            <div><span class="disc-detail-label">ID</span><span class="disc-detail-val">Synack RD #690</span></div>
+                            <div><span class="disc-detail-label">CWE</span><span class="disc-detail-val">CWE-200</span></div>
+                        </div>
+                        <p class="disc-detail-text">Infrastructure reconnaissance exposure via Synack Red Team.</p>
+                    </div>
+                </div>
+
+                <div class="disc-card" onclick="this.classList.toggle('open')" style="--sev-color:#636366;">
+                    <div class="disc-card-row">
+                        <div class="disc-card-icon disc-card-initials">PX</div>
+                        <div class="disc-card-body">
+                            <div class="disc-card-org">Pretix</div>
+                            <div class="disc-card-title">Log injection via request_id_header configuration parsing</div>
+                        </div>
+                        <div class="disc-card-meta">
+                            <span class="disc-badge disc-badge-gray">Closed</span>
+                            <span class="disc-chevron">›</span>
+                        </div>
+                    </div>
+                    <div class="disc-card-detail">
+                        <div class="disc-detail-grid">
+                            <div><span class="disc-detail-label">ID</span><span class="disc-detail-val"><a href="https://github.com/pretix/pretix/pull/5920" target="_blank" style="color:#0a84ff;">PR #5920</a></span></div>
+                            <div><span class="disc-detail-label">CWE</span><span class="disc-detail-val">CWE-117</span></div>
+                        </div>
+                        <p class="disc-detail-text">Maintainers accepted patch. <a href="https://pretix.eu/about/en/blog/20260224-release-2026-2/#:~:text=The%20config%20property-,request_id_header,-is%20now%20validated" target="_blank" style="color:#0a84ff;">Pretix Blog</a></p>
+                    </div>
+                </div>
+
+                <div class="disc-card" onclick="this.classList.toggle('open')" style="--sev-color:#636366;">
+                    <div class="disc-card-row">
+                        <div class="disc-card-icon"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/mercedes.svg" alt="Mercedes-Benz"></div>
+                        <div class="disc-card-body">
+                            <div class="disc-card-org">Mercedes-Benz <span class="disc-card-sub">Xentry Update Service</span></div>
+                            <div class="disc-card-title">Public OTA update directories exposing update manifests</div>
+                        </div>
+                        <div class="disc-card-meta">
+                            <span class="disc-badge disc-badge-orange">Reported</span>
+                            <span class="disc-chevron">›</span>
+                        </div>
+                    </div>
+                    <div class="disc-card-detail">
+                        <div class="disc-detail-grid">
+                            <div><span class="disc-detail-label">ID</span><span class="disc-detail-val">Responsible Disclosure</span></div>
+                            <div><span class="disc-detail-label">CWE</span><span class="disc-detail-val">CWE-200</span></div>
+                        </div>
+                        <p class="disc-detail-text">Passive endpoint discovery.</p>
+                    </div>
+                </div>
+
+                <div class="disc-card" onclick="this.classList.toggle('open')" style="--sev-color:#636366;">
+                    <div class="disc-card-row">
+                        <div class="disc-card-icon"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/nasa.svg" alt="NASA"></div>
+                        <div class="disc-card-body">
+                            <div class="disc-card-org">NASA</div>
+                            <div class="disc-card-title">Internal system data exposure via passive reconnaissance</div>
+                        </div>
+                        <div class="disc-card-meta">
+                            <span class="disc-badge disc-badge-orange">Reported</span>
+                            <span class="disc-chevron">›</span>
+                        </div>
+                    </div>
+                    <div class="disc-card-detail">
+                        <div class="disc-detail-grid">
+                            <div><span class="disc-detail-label">ID</span><span class="disc-detail-val">Responsible Disclosure</span></div>
+                            <div><span class="disc-detail-label">CWE</span><span class="disc-detail-val">CWE-200</span></div>
+                        </div>
+                        <p class="disc-detail-text">Discovered via endpoint analysis.</p>
+                    </div>
+                </div>
+
+                <div class="disc-card" onclick="this.classList.toggle('open')" style="--sev-color:#636366;">
+                    <div class="disc-card-row">
+                        <div class="disc-card-icon"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/openai.svg" alt="OpenAI"></div>
+                        <div class="disc-card-body">
+                            <div class="disc-card-org">OpenAI <span class="disc-card-sub">ChatGPT Atlas</span></div>
+                            <div class="disc-card-title">World-readable debug logs exposing renderer console output</div>
+                        </div>
+                        <div class="disc-card-meta">
+                            <span class="disc-badge disc-badge-gray">Submitted</span>
+                            <span class="disc-chevron">›</span>
+                        </div>
+                    </div>
+                    <div class="disc-card-detail">
+                        <div class="disc-detail-grid">
+                            <div><span class="disc-detail-label">ID</span><span class="disc-detail-val">Bugcrowd</span></div>
+                            <div><span class="disc-detail-label">CWE</span><span class="disc-detail-val">CWE-532</span></div>
+                        </div>
+                        <p class="disc-detail-text">macOS Atlas browser. 644-permission logs persisted OAuth tokens. Informational hardening recommendation.</p>
+                    </div>
+                </div>
+
+                <div class="disc-card" onclick="this.classList.toggle('open')" style="--sev-color:#636366;">
+                    <div class="disc-card-row">
+                        <div class="disc-card-icon"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/n8n.svg" alt="n8n"></div>
+                        <div class="disc-card-body">
+                            <div class="disc-card-org">n8n <span class="disc-card-sub">SSRF</span></div>
+                            <div class="disc-card-title">Server-Side Request Forgery via workflows/from-url endpoint</div>
+                        </div>
+                        <div class="disc-card-meta">
+                            <span class="disc-badge disc-badge-orange">Under Review</span>
+                            <span class="disc-chevron">›</span>
+                        </div>
+                    </div>
+                    <div class="disc-card-detail">
+                        <div class="disc-detail-grid">
+                            <div><span class="disc-detail-label">ID</span><span class="disc-detail-val">GHSA-4239-f84r-mmhj</span></div>
+                            <div><span class="disc-detail-label">CWE</span><span class="disc-detail-val">CWE-918</span></div>
+                        </div>
+                        <p class="disc-detail-text">Unfiltered axios.get() call enabling internal port-state differentiation. Authenticated-only access.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <p class="disc-footer-note">All findings responsibly disclosed per coordinated vulnerability disclosure practices.</p>
+
+        <div class="section-image">
+            <img src="images/x.jpg" alt="CVE in progress" style="width:400px; border-radius:20px;">
+        </div>
+
     </section>
 
 
@@ -222,7 +624,7 @@
                 <br>• Secured #1 position at Pace University
                 <br> • Team Lead across OSINT, Cryptography, Web Exploitation, Network Analysis challenges
                 <br>
-                <br>ISC2 CTF – Saint Peter’s University, NJ
+                <br>ISC2 CTF – Saint Peter's University, NJ
                 <br>• Team Lead • Placed 7th out of 40 teams
                 <br>
                 <br> NSA Codebreaker Challenge
@@ -230,7 +632,7 @@
                 <br>
                 <br>Hackathons
                 <br>• ShellHacks 2024 – Florida International University
-                <br> • VTHacks 2024 - Virginia Tech - Developed “FinShield” cyber risk modeling solution
+                <br> • VTHacks 2024 - Virginia Tech - Developed "FinShield" cyber risk modeling solution
                 <br>
                 <br>Leadership
                 <br> • Regional Moderator - Northeast Collegiate Cyber Defense League (Pace University)
@@ -307,8 +709,8 @@
             <p>
                 Information Security Manager at AMD | Associate Professor, Pace University
                 <br>
-                <br> “Karan has an exceptional talent for cybersecurity. His strengths in penetration testing, vulnerability assessment, and ethical hacking are matched by his strategic thinking about the future of cyber defense. He combines technical depth
-                with professionalism, curiosity, and determination - qualities essential in modern security engineering. I am confident he will be a valuable asset to any organization.”
+                <br> "Karan has an exceptional talent for cybersecurity. His strengths in penetration testing, vulnerability assessment, and ethical hacking are matched by his strategic thinking about the future of cyber defense. He combines technical depth
+                with professionalism, curiosity, and determination - qualities essential in modern security engineering. I am confident he will be a valuable asset to any organization."
             </p>
         </div>
 
