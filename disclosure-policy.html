@@ -1,0 +1,58 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Karan Kurani independent vulnerability research and coordinated disclosure resources."><title>Vulnerability Disclosure Policy | Karan Kurani</title><style>
+:root{color-scheme:light;--ink:#0e1a30;--muted:#53647c;--blue:#1769c2;--line:#e3e9f0;--bg:#f5f8fd}*{box-sizing:border-box}body{margin:0;background:var(--bg);font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink)}header{background:linear-gradient(115deg,#0e1a30,#153c68);color:white;padding:32px max(24px,calc((100vw - 1060px)/2))}header .brand{letter-spacing:.14em;font-size:12px;font-weight:750;color:#b7dbff}header h1{font-size:30px;margin:8px 0 4px;line-height:1.2}header p{margin:0;color:#c9d9eb}nav{display:flex;gap:22px;flex-wrap:wrap;margin-top:18px}nav a{color:#eff7ff;text-decoration:none;font-weight:600;font-size:14px;border-bottom:1px solid transparent}nav a:hover{border-bottom-color:currentColor}main{max-width:1060px;margin:30px auto;padding:40px 48px;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 8px 22px #1f3f6220}h1,h2,h3{line-height:1.27;letter-spacing:-.02em}main h1{font-size:30px}main h2{font-size:21px;border-top:1px solid var(--line);padding-top:22px;margin-top:30px}main h3{font-size:17px}p,li{max-width:900px}a{color:var(--blue);overflow-wrap:anywhere}table{border-collapse:collapse;display:block;overflow-x:auto;font-size:14px;width:100%;margin:18px 0}th,td{border-bottom:1px solid var(--line);padding:11px 13px;vertical-align:top;text-align:left}th{background:#eef4fb;white-space:nowrap}blockquote{margin:15px 0;padding:12px 18px;border-left:3px solid #2d82cd;background:#f1f7ff}code{background:#edf2fa;padding:1px 4px;border-radius:3px}strong{font-weight:750}footer{text-align:center;color:var(--muted);padding:20px 24px 38px;font-size:13px}footer a{color:var(--muted)}@media(max-width:650px){header{padding:24px 20px}header h1{font-size:25px}main{margin:12px;padding:24px 17px}main h1{font-size:24px}nav{gap:12px}}
+</style></head><body><header><div class="brand">KARAN KURANI / SECURITY RESEARCH</div><h1>Vulnerability research & coordinated disclosure</h1><p>Independent researcher · India · CNA applicant (not yet a CNA)</p><nav><a href="disclosure-policy.html">Disclosure policy</a><a href="advisories.html">Advisory index</a><a href="https://github.com/kuranikaran/Portfolio">Research portfolio</a><a href="mailto:karankurani3k@gmail.com">Private contact</a></nav></header><main><h1>Vulnerability Disclosure and Coordination Policy</h1>
+<p><strong>Karan Kurani | Independent Security Research</strong><br />
+<strong>Effective date:</strong> 11 October 2026<br />
+<strong>Contact:</strong> karankurani3k@gmail.com<br />
+<strong>Website:</strong> https://github.com/kuranikaran/Portfolio<br />
+<strong>CNA status:</strong> Applicant only - not approved, and not authorized to assign CVE IDs.</p>
+<h2>1. Purpose and independence</h2>
+<p>This policy describes the handling of vulnerability reports, communication with affected suppliers, and the publication of security research by Karan Kurani as an <strong>independent vulnerability researcher</strong> based in India. This research activity is not conducted on behalf of any employer or client. Confidential client and employer systems, findings and data are excluded from this publication process unless their owners expressly authorize disclosure.</p>
+<p>The policy is intended to support transparent, accurate and responsible handling of security information and, if approved in the future, an appropriate researcher-CNA operating process under the CVE Program rules.</p>
+<h2>2. Reporting channel and minimum information</h2>
+<p>Send confidential reports to <strong>karankurani3k@gmail.com</strong>. Suggested subject: <code>Private vulnerability disclosure - &lt;product / component&gt;</code>.</p>
+<p>For efficient assessment, include when available:</p>
+<ol>
+<li>Product, supplier, repository URL, version/commit, deployment prerequisites and affected configurations.</li>
+<li>Technical summary, root cause, security impact and the violated trust boundary.</li>
+<li>Safe reproduction steps and evidence from a test system that you own or are authorized to evaluate.</li>
+<li>Suggested remediation or mitigation, if known, and any already-public references.</li>
+<li>Your preferred researcher credit, contact information and coordination or embargo considerations.</li>
+</ol>
+<p>Do <strong>not</strong> include plaintext credentials, unrelated personal information or raw customer datasets. Request a secure file-transfer method before sharing sensitive evidence. Avoid public issue trackers for unpublished exploit details.</p>
+<h2>3. Scope and authorization</h2>
+<p>Research may concern open-source or commercial third-party software where permission to investigate and disclose has been obtained or the research is otherwise lawful and authorized. I may help coordinate externally reported findings on a case-by-case basis.</p>
+<p><strong>This policy does not authorize testing, exploitation, scanning or account access against third-party products, networks or services.</strong> The relevant supplier's policies, program scopes and applicable law still govern such activities. Testing a portfolio property under my control likewise requires compliance with any explicit scope and restrictions I publish for that property.</p>
+<h2>4. Intake, assessment and communication</h2>
+<ul>
+<li><strong>Acknowledgment target:</strong> within 5 business days of receiving a sufficiently detailed report.</li>
+<li><strong>Initial assessment/update target:</strong> within 10 business days where practicable.</li>
+<li><strong>Assessment:</strong> attempt to verify affected versions, exploitability, duplicate status, the security boundary and availability of fixes or mitigations.</li>
+<li><strong>Coordination:</strong> identify the supplier, product security team, appropriate existing CNA and other relevant stakeholders; make reasonable efforts to notify them privately.</li>
+<li><strong>Unresolved reports:</strong> update the reporter when feasible, explain material blockers and retain a limited audit trail of communications and evidence.</li>
+</ul>
+<p>These are best-effort targets; complex investigations, limited availability and supplier response times can affect timing. Submission does not guarantee publication, CVE assignment or payment.</p>
+<h2>5. Coordinated disclosure and publication</h2>
+<p>I generally seek coordinated publication with the supplier after a fix or risk-reduction guidance is available. As an <strong>initial planning benchmark</strong>, a 90-day coordination period from acknowledged vendor notification may be discussed, but is <strong>not an automatic publication deadline</strong>. Dates may be extended, shortened or withheld based on evidence, supplier progress, public exploitation, the risk to users, legal duties and public-interest considerations.</p>
+<p>Published research notes identify the affected product and versions when established, explain the security impact, offer fixes or mitigations where available, and link to the authoritative vendor advisory and CVE Record. Unsupported severity claims and unnecessarily weaponizable details are avoided. Published material is corrected if credible new information emerges.</p>
+<h2>6. CVE assignments and CNA scope</h2>
+<p><strong>Current status:</strong> I am applying to become a CNA. I cannot reserve, assign or publish CVE IDs in the CNA role until formally accepted and given authorized access. Existing CVE IDs cited on this site were assigned by other authorized CNAs, as documented by their records.</p>
+<p><strong>Proposed future scope, subject to Root approval:</strong> vulnerabilities I independently discover or coordinate in third-party software when no more specifically scoped CNA is responsible, in accordance with the CVE Program's scope, vulnerability determination, first-refusal, record quality, and publication requirements.</p>
+<p>If approved, I will publish the final authorized CNA scope and an assignment policy that follows current CNA Operational Rules. Where another CNA has the most appropriate scope, that CNA must be contacted and given first opportunity to assign; disputes or disputed scope will be escalated through CVE Program processes rather than bypassed.</p>
+<p>CVE requests outside an approved scope will be redirected to the appropriate CNA or to an appropriate CNA of Last Resort. Reporting to this address never guarantees that a CVE ID will be issued.</p>
+<h2>7. Researcher recognition, confidentiality and data handling</h2>
+<p>Researcher credit will be recorded as requested where consistent with supplier policy and applicable publication requirements. Anonymous reports are considered if they provide enough evidence to investigate.</p>
+<p>Private reports are shared only with parties reasonably needed for technical verification and coordinated disclosure. I will minimize collection and retention of sensitive material and remove unnecessary secrets from publication artifacts. Do not submit data you are not legally entitled to share.</p>
+<h2>8. Legal and reward limitations</h2>
+<p>No monetary bounty program is currently operated. No payment, safe-harbor guarantee or immunity is offered by this policy. <strong>It cannot grant permission to test third-party systems or waive a third party's legal rights.</strong> All parties should act within applicable law and authorized testing scopes.</p>
+<h2>9. Public advisory archive and corrections</h2>
+<p>Public, non-embargoed research is indexed at <a href="advisories.html">Public Research and Advisory Index</a>. The index distinguishes original researcher-authored notes from external supplier/GitHub advisories and identifies the issuing CNA where known.</p>
+<p>Corrections, vulnerability record disputes, mistaken attribution or withdrawn technical claims can be reported by email. Material corrections will be reflected in the public pages with an updated date and appropriate references.</p>
+<h2>10. Governing references</h2>
+<ul>
+<li><a href="https://www.cve.org/PartnerInformation/Partner">CVE Program - Become a Partner</a></li>
+<li><a href="https://github.com/CVEProject/cve-documents/blob/master/CNA_Rules.md">CNA Operational Rules v4.2.0</a></li>
+<li><a href="https://docs.github.com/en/code-security/concepts/vulnerability-reporting-and-management/coordinated-disclosure">GitHub guidance - Coordinated disclosure</a></li>
+</ul>
+<p><strong>Change history:</strong> 2026-10-11 - initial public policy drafted for researcher-CNA application readiness.</p>
+</main><footer>© 2026 Karan Kurani · No current CVE assignment authority · <a href="mailto:karankurani3k@gmail.com">Contact</a></footer></body></html>

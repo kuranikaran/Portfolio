@@ -1,0 +1,100 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Karan Kurani independent vulnerability research and coordinated disclosure resources."><title>Security Advisory Index | Karan Kurani</title><style>
+:root{color-scheme:light;--ink:#0e1a30;--muted:#53647c;--blue:#1769c2;--line:#e3e9f0;--bg:#f5f8fd}*{box-sizing:border-box}body{margin:0;background:var(--bg);font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink)}header{background:linear-gradient(115deg,#0e1a30,#153c68);color:white;padding:32px max(24px,calc((100vw - 1060px)/2))}header .brand{letter-spacing:.14em;font-size:12px;font-weight:750;color:#b7dbff}header h1{font-size:30px;margin:8px 0 4px;line-height:1.2}header p{margin:0;color:#c9d9eb}nav{display:flex;gap:22px;flex-wrap:wrap;margin-top:18px}nav a{color:#eff7ff;text-decoration:none;font-weight:600;font-size:14px;border-bottom:1px solid transparent}nav a:hover{border-bottom-color:currentColor}main{max-width:1060px;margin:30px auto;padding:40px 48px;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 8px 22px #1f3f6220}h1,h2,h3{line-height:1.27;letter-spacing:-.02em}main h1{font-size:30px}main h2{font-size:21px;border-top:1px solid var(--line);padding-top:22px;margin-top:30px}main h3{font-size:17px}p,li{max-width:900px}a{color:var(--blue);overflow-wrap:anywhere}table{border-collapse:collapse;display:block;overflow-x:auto;font-size:14px;width:100%;margin:18px 0}th,td{border-bottom:1px solid var(--line);padding:11px 13px;vertical-align:top;text-align:left}th{background:#eef4fb;white-space:nowrap}blockquote{margin:15px 0;padding:12px 18px;border-left:3px solid #2d82cd;background:#f1f7ff}code{background:#edf2fa;padding:1px 4px;border-radius:3px}strong{font-weight:750}footer{text-align:center;color:var(--muted);padding:20px 24px 38px;font-size:13px}footer a{color:var(--muted)}@media(max-width:650px){header{padding:24px 20px}header h1{font-size:25px}main{margin:12px;padding:24px 17px}main h1{font-size:24px}nav{gap:12px}}
+</style></head><body><header><div class="brand">KARAN KURANI / SECURITY RESEARCH</div><h1>Vulnerability research & coordinated disclosure</h1><p>Independent researcher · India · CNA applicant (not yet a CNA)</p><nav><a href="disclosure-policy.html">Disclosure policy</a><a href="advisories.html">Advisory index</a><a href="https://github.com/kuranikaran/Portfolio">Research portfolio</a><a href="mailto:karankurani3k@gmail.com">Private contact</a></nav></header><main><h1>Public Research and Security Advisory Index</h1>
+<p><strong>Karan Kurani | Independent Security Research</strong><br />
+<strong>Last updated:</strong> 11 October 2026<br />
+<strong>CNA status:</strong> Applicant only. All CVE IDs below were assigned by the respective authorized CNAs - <strong>not</strong> by this research site.</p>
+<p>This public index brings together original, non-embargoed research notes authored here and existing public supplier/GitHub advisories that acknowledge Karan Kurani's reporting or collaboration. The external advisories remain the authoritative technical sources. This is not a claim of CNA authority or exclusive discovery credit.</p>
+<h2>Independently published research notes on this site</h2>
+<table>
+<thead>
+<tr>
+  <th>Research note</th>
+  <th>Scope</th>
+  <th>Authoritative advisory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="advisories/CVE-2026-32230.html">CVE-2026-32230 - Uptime Kuma private monitor information exposure</a></td>
+  <td>Missing public-monitor check</td>
+  <td><a href="https://github.com/louislam/uptime-kuma/security/advisories/GHSA-c7hf-c5p5-5g6h">Vendor advisory</a></td>
+</tr>
+<tr>
+  <td><a href="advisories/CVE-2026-44304.html">CVE-2026-44304 - Netflix Lemur LDAP filter injection</a></td>
+  <td>LDAP username escaping / privilege escalation</td>
+  <td><a href="https://github.com/Netflix/lemur/security/advisories/GHSA-3r34-vq8m-39gh">Vendor advisory</a></td>
+</tr>
+<tr>
+  <td><a href="advisories/CVE-2026-28970.html">CVE-2026-28970 - Apple SwiftNIO CRLF injection</a></td>
+  <td>Outbound HTTP start-line validation</td>
+  <td><a href="https://github.com/apple/swift-nio/security/advisories/GHSA-cq87-8r7h-962v">Vendor advisory</a></td>
+</tr>
+</tbody>
+</table>
+<h2>External advisories and public researcher acknowledgments</h2>
+<table>
+<thead>
+<tr>
+  <th>CVE ID</th>
+  <th>Project / product</th>
+  <th>Publicly described issue</th>
+  <th>Primary public source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="https://www.cve.org/CVERecord?id=CVE-2026-55440">CVE-2026-55440</a></td>
+  <td>Microsoft UFO</td>
+  <td>Authenticated session-squatting / availability impact</td>
+  <td><a href="https://github.com/microsoft/UFO/security/advisories/GHSA-hxjv-fmjf-wmjf">Supplier / GitHub advisory</a></td>
+</tr>
+<tr>
+  <td><a href="https://www.cve.org/CVERecord?id=CVE-2026-44304">CVE-2026-44304</a></td>
+  <td>Netflix Lemur</td>
+  <td>LDAP filter injection / privilege escalation</td>
+  <td><a href="https://github.com/Netflix/lemur/security/advisories/GHSA-3r34-vq8m-39gh">Supplier / GitHub advisory</a></td>
+</tr>
+<tr>
+  <td><a href="https://www.cve.org/CVERecord?id=CVE-2026-44305">CVE-2026-44305</a></td>
+  <td>Netflix Lemur</td>
+  <td>LDAP TLS certificate validation disabled</td>
+  <td><a href="https://github.com/Netflix/lemur/security/advisories/GHSA-vr7c-r5gj-j3w5">Supplier / GitHub advisory</a></td>
+</tr>
+<tr>
+  <td><a href="https://www.cve.org/CVERecord?id=CVE-2026-28970">CVE-2026-28970</a></td>
+  <td>Apple SwiftNIO</td>
+  <td>CRLF injection in outbound HTTP start-line fields</td>
+  <td><a href="https://github.com/apple/swift-nio/security/advisories/GHSA-cq87-8r7h-962v">Supplier / GitHub advisory</a></td>
+</tr>
+<tr>
+  <td><a href="https://www.cve.org/CVERecord?id=CVE-2026-28898">CVE-2026-28898</a></td>
+  <td>Apple SwiftNIO HTTP/2</td>
+  <td>HTTP/2 to HTTP/1 request smuggling</td>
+  <td><a href="https://github.com/apple/swift-nio-http2/security/advisories/GHSA-4px2-pw77-vc85">Supplier / GitHub advisory</a></td>
+</tr>
+<tr>
+  <td><a href="https://www.cve.org/CVERecord?id=CVE-2026-35627">CVE-2026-35627</a></td>
+  <td>OpenClaw</td>
+  <td>Unauthenticated pre-policy Nostr processing</td>
+  <td><a href="https://github.com/openclaw/openclaw/security/advisories/GHSA-65h8-27jh-q8wv">Supplier / GitHub advisory</a></td>
+</tr>
+<tr>
+  <td><a href="https://www.cve.org/CVERecord?id=CVE-2026-32230">CVE-2026-32230</a></td>
+  <td>Uptime Kuma</td>
+  <td>Private monitor ping data exposure</td>
+  <td><a href="https://github.com/louislam/uptime-kuma/security/advisories/GHSA-c7hf-c5p5-5g6h">Supplier / GitHub advisory</a></td>
+</tr>
+</tbody>
+</table>
+<h2>Attribution and disclosure notes</h2>
+<ul>
+<li>The external advisories are <strong>publications by their issuing suppliers or platforms</strong>. The list above is a verified research-credit index; it does not count seven new original publications on this website.</li>
+<li>The portfolio also describes field validation involving CVE-2025-55182 (React Server Components). That ID describes a broader pre-existing vulnerability and is deliberately <strong>not</strong> presented here as an original CVE assignment or a public advisory credit for this researcher.</li>
+<li>Only findings cleared for public disclosure appear in this archive. Employer/client assessments, private exploit evidence, nonpublic vendor conversations and embargoed details are excluded.</li>
+<li>A CVE ID is a vulnerability identifier, not a bounty, award or proof of exclusive discovery. Official CVE Records and the suppliers' advisory pages take precedence if any detail differs.</li>
+</ul>
+<p>For privately coordinated vulnerabilities or corrections, read the <a href="disclosure-policy.html">Disclosure Policy</a> and contact <strong>karankurani3k@gmail.com</strong>.</p>
+<h2>Future publication process</h2>
+<p>Each new eligible public research note will be added here with publication and revision dates, affected versions where verified, impact and root cause, vendor notification status, remediation guidance and authoritative references. No embargoed details will be placed in this public index.</p>
+</main><footer>© 2026 Karan Kurani · No current CVE assignment authority · <a href="mailto:karankurani3k@gmail.com">Contact</a></footer></body></html>
